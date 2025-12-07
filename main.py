@@ -2,7 +2,7 @@ import pygame
 import requests
 from pynput.keyboard import Key, Controller
 
-IP = "192.168.7.230"
+IP = ""
 PORT = "8080"
 
 keyboard = Controller()
