@@ -1,0 +1,11 @@
+[project]
+name = "koreader-wireless-page-turner"
+version = "0.1.0"
+description = "Wireless gamepad controller for KOReader page turning and brightness adjustment"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pygame>=2.6.1",
+    "pynput>=1.8.1",
+    "requests>=2.32.5",
+]
