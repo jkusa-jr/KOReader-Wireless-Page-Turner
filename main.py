@@ -2,8 +2,8 @@ import pygame
 import requests
 from pynput.keyboard import Key, Controller
 
-IP = ""
-PORT = ""
+IP = "192.168.7.230"
+PORT = "8080"
 
 keyboard = Controller()
 pygame.init()
@@ -23,5 +23,11 @@ if joystick_count > 0:
                     requests.get(f"http://{IP}:{PORT}/koreader/event/GotoViewRel/-1")
                 elif event.button == 2:
                     requests.get(f"http://{IP}:{PORT}/koreader/event/GotoViewRel/1")
+                elif event.button == 17:
+                    requests.get(f"http://{IP}:{PORT}/koreader/event/IncreaseFlIntensity/1")
+                elif event.button == 19:
+                    requests.get(f"http://{IP}:{PORT}/koreader/event/DecreaseFlIntensity/1")
+                else:
+                    print(event.button)
 else:
     print("No joystick connected.")
